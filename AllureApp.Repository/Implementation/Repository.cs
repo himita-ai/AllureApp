@@ -40,6 +40,7 @@
 //        public void Update(TEntity entity)=> _dbContext.Set<TEntity>().Update(entity);
 //    }
 //}
+using AllureApp.Core.DBContext;
 using AllureApp.Repository.Interface;
 
 using Microsoft.EntityFrameworkCore;
@@ -50,9 +51,9 @@ namespace AllureApp.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly DbContext _dbContext;
+        protected readonly AllureAppContext _dbContext;
 
-        public Repository(DbContext dbContext)
+        public Repository(AllureAppContext dbContext)
         {
             _dbContext = dbContext;
         }

@@ -1,4 +1,6 @@
 ﻿using AllureApp.Core.Entities;
+using AllureStore.Core.Config;
+using AllureStore.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,11 +16,15 @@ namespace AllureApp.Core.DBContext
     public AllureAppContext(DbContextOptions<AllureAppContext> options) : base(options) { }
 
     public DbSet<User> Users { get; set; }
+      public DbSet<AdminNavItem> AdminNavItems { get; set; }
+        public DbSet<AdminRole> AdminRole { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<Product> Products { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        base.OnModelCreating(builder);
-        // Optional: configure entities here
+        public void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfiguration(new UserMapConfig());
+        }
     }
-}
 }

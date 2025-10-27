@@ -3,6 +3,7 @@ using AllureApp.Core.Entities;
 using AllureApp.Models;
 
 using AllureApp.Repository.Interface;
+using AllureStore.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -18,6 +19,66 @@ namespace AllureApp.Repository
         {
             _context = context;
         }
+
+       
+
+        public IEnumerable<AdminNavItemModel> GetAdminNavItems()
+        {
+            {
+                try
+                {
+                    var items = _context.AdminNavItems.Where(c => c.Enabled == true && c.ParentId == 0).Select(t => new AdminNavItemModel
+                    {
+                        Id = t.Id,
+                        ParentId = t.ParentId,
+                        Name = t.Name,
+                        Url = t.Url,
+                        icon = t.icon,
+                        SortOrder = t.SortOrder,
+                        Children = _context.AdminNavItems.Where(x => x.Enabled == true && x.ParentId != t.ParentId).Select(item => new AdminNavItemModel
+                        {
+                            Id = item.Id,
+                            ParentId = item.ParentId,
+                            Name = item.Name,
+                            Url = item.Url,
+                            icon = item.icon,
+                            SortOrder = item.SortOrder,
+                        }).ToList(),
+                    }).ToList();
+                    return items;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+
+        }
+
+        public IEnumerable<UserModel> GetAllUsers()
+        {
+            try
+            {
+                var users = _context.Users.Where(c => c.IsDeleted == false).Select(x => new UserModel
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Email = x.Email,
+                    Address = x.Address,
+                    PhoneNumber = x.PhoneNumber,
+                    RoleName = x.Role.RoleName,
+                }).ToList();
+                return users;
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
+
+       
+        
 
         public ResponseModel<User> InsertOrUpdateUser(UserModel user)
         {
@@ -90,14 +151,14 @@ namespace AllureApp.Repository
             var ml = new UserModel();
             try
             {
-                var user = _context.Users.FirstOrDefault(x => x.Email.Equals(email) && x.Password == password && x.PasswordExpiryDate > DateTime.Now);
+                var user = _context.Users.Include(x => x.Role).FirstOrDefault(x => x.Email.Equals(email) && x.Password == password && x.PasswordExpiryDate > DateTime.Now);
                 if (user != null)
                 {
                     ml.Id = user.Id;
                     ml.FirstName = user.FirstName;
                     ml.LastName = user.LastName;
                     ml.Email = user.Email;
-
+                    ml.RoleName = user.Role.RoleName;
                 }
                 return ml;
             }
@@ -106,6 +167,33 @@ namespace AllureApp.Repository
                 throw;
             }
         }
+        public bool AssignRoleToUsers(AssignRoleModel role)
+        {
+            bool flag = false;
+            try
+            {
+                var roleId = _context.AdminRole.FirstOrDefault(x => x.RoleName.Equals(role.RoleName))?.Id;
+                if (roleId > 0 && role.UserIds.Length > 0)
+                {
+                    foreach (var id in role.UserIds)
+                    {
+                        var userExist = _context.Users.FirstOrDefault(x => x.Id == id);
+                        if (userExist != null)
+                        {
+                            userExist.RoleId = roleId;
+                            _context.SaveChanges();
+                            flag = true;
+                        }
+                    }
+                }
+                return flag;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }
     

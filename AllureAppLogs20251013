@@ -1,0 +1,592 @@
+2025-10-13 09:43:09.072 +05:30 [INF] User profile is available. Using 'C:\Users\91982\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-13 09:43:09.635 +05:30 [INF] Now listening on: https://localhost:7103
+2025-10-13 09:43:09.636 +05:30 [INF] Now listening on: http://localhost:5209
+2025-10-13 09:43:09.729 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-13 09:43:09.729 +05:30 [INF] Hosting environment: Development
+2025-10-13 09:43:09.729 +05:30 [INF] Content root path: C:\Users\91982\source\repos\AllureAppAPI\AllureApp.API
+2025-10-13 09:43:14.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/swagger/index.html - null null
+2025-10-13 09:43:14.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-13 09:43:14.448 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16511 application/javascript; charset=utf-8 34.646ms
+2025-10-13 09:43:14.521 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - null null
+2025-10-13 09:43:14.588 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 68.0418ms
+2025-10-13 09:43:14.773 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/swagger/index.html - 200 null text/html;charset=utf-8 361.0941ms
+2025-10-13 09:43:15.519 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-13 09:43:15.519 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-10-13 09:43:15.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16511 application/javascript; charset=utf-8 10.9061ms
+2025-10-13 09:43:15.788 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 268.8614ms
+2025-10-13 09:43:15.851 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - null null
+2025-10-13 09:43:15.859 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.8445ms
+2025-10-13 09:43:29.567 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/swagger/index.html - null null
+2025-10-13 09:43:29.584 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/swagger/index.html - 200 null text/html;charset=utf-8 17.0745ms
+2025-10-13 09:43:29.647 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-13 09:43:29.648 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-10-13 09:43:29.656 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16511 application/javascript; charset=utf-8 9.6967ms
+2025-10-13 09:43:29.677 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.6352ms
+2025-10-13 09:43:29.854 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - null null
+2025-10-13 09:43:29.888 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.2394ms
+2025-10-13 09:46:49.197 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:46:49.355 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:46:49.358 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - 204 null null 159.7819ms
+2025-10-13 09:46:49.360 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:46:49.626 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:16:49'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:46:49.662 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:16:49'.
+2025-10-13 09:46:49.663 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:46:49.668 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:46:49.704 +05:30 [INF] Route matched with {action = "GetAdminNavItems", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:46:51.405 +05:30 [WRN] No store type was specified for the decimal property 'SortOrder' on entity type 'AdminNavItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-10-13 09:46:55.403 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ParentId], [a].[Name], [a].[Url], [a].[icon], [a].[SortOrder], [t].[Id], [t].[ParentId], [t].[Name], [t].[Url], [t].[icon], [t].[SortOrder]
+FROM [AdminNavItems] AS [a]
+LEFT JOIN (
+    SELECT [a0].[Id], [a0].[ParentId], [a0].[Name], [a0].[Url], [a0].[icon], [a0].[SortOrder]
+    FROM [AdminNavItems] AS [a0]
+    WHERE [a0].[Enabled] = CAST(1 AS bit)
+) AS [t] ON ([a].[ParentId] <> [t].[ParentId] OR [a].[ParentId] IS NULL OR [t].[ParentId] IS NULL) AND ([a].[ParentId] IS NOT NULL OR [t].[ParentId] IS NOT NULL)
+WHERE [a].[Enabled] = CAST(1 AS bit) AND [a].[ParentId] = 0
+ORDER BY [a].[Id]
+2025-10-13 09:46:55.473 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminNavItemModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:46:55.538 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API) in 5825.0851ms
+2025-10-13 09:46:55.538 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:46:55.550 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - 200 null application/json; charset=utf-8 6191.1552ms
+2025-10-13 09:47:11.856 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:47:11.857 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:47:11.865 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:11.865 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:11.866 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 9.546ms
+2025-10-13 09:47:11.866 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - 204 null null 9.5483ms
+2025-10-13 09:47:11.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:47:11.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:47:12.114 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:11'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:47:12.114 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:11'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:47:12.114 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:11'.
+2025-10-13 09:47:12.115 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:11'.
+2025-10-13 09:47:12.115 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:12.115 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:12.115 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:47:12.115 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:47:12.122 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:47:12.122 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:47:12.281 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Address], [u].[PhoneNumber], [a].[RoleName]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:47:12.288 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:47:12.290 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:47:12.294 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureApp.Models.UserModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:47:12.300 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 177.999ms
+2025-10-13 09:47:12.300 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:47:12.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 431.2025ms
+2025-10-13 09:47:12.302 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API) in 180.1961ms
+2025-10-13 09:47:12.302 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:47:12.303 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - 200 null application/json; charset=utf-8 432.4993ms
+2025-10-13 09:47:23.947 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:47:23.948 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:23.948 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 1.3213ms
+2025-10-13 09:47:23.951 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:47:24.070 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:23'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:47:24.071 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:23'.
+2025-10-13 09:47:24.071 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:24.071 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:47:24.071 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:47:24.285 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:47:24.285 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:47:24.286 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 214.2388ms
+2025-10-13 09:47:24.286 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:47:24.286 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 335.2701ms
+2025-10-13 09:47:45.798 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:47:45.798 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:47:45.798 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:45.799 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:45.799 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 0.7757ms
+2025-10-13 09:47:45.799 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - 204 null null 0.6251ms
+2025-10-13 09:47:45.802 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:47:45.803 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:47:45.940 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:45'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:47:45.970 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:45'.
+2025-10-13 09:47:45.970 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:45.970 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:47:45.971 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:47:45.969 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:45'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:47:45.994 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:17:45'.
+2025-10-13 09:47:45.995 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:47:45.995 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:47:45.995 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:47:46.029 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Address], [u].[PhoneNumber], [a].[RoleName]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:47:46.029 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:47:46.030 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:47:46.030 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureApp.Models.UserModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:47:46.030 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 34.5461ms
+2025-10-13 09:47:46.030 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:47:46.030 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 227.9338ms
+2025-10-13 09:47:46.030 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API) in 57.3493ms
+2025-10-13 09:47:46.030 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:47:46.030 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - 200 null application/json; charset=utf-8 227.5125ms
+2025-10-13 09:48:14.689 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:48:14.689 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:48:14.690 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:14.690 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - 204 null null 1.1933ms
+2025-10-13 09:48:14.690 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:48:14.691 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:14.692 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 3.2982ms
+2025-10-13 09:48:14.693 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:14.695 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - 204 null null 6.0585ms
+2025-10-13 09:48:14.697 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:48:14.698 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:48:14.704 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:48:14.918 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:14'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:48:14.924 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:14'.
+2025-10-13 09:48:14.924 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:14.924 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:48:14.924 +05:30 [INF] Route matched with {action = "GetAdminNavItems", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:48:15.024 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:14'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:48:15.024 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:14'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:48:15.025 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:14'.
+2025-10-13 09:48:15.026 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:14'.
+2025-10-13 09:48:15.026 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:15.026 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:15.026 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:48:15.026 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:48:15.026 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:48:15.026 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:48:15.039 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:48:15.040 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:48:15.040 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 14.1267ms
+2025-10-13 09:48:15.040 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:48:15.040 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 342.9927ms
+2025-10-13 09:48:15.047 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ParentId], [a].[Name], [a].[Url], [a].[icon], [a].[SortOrder], [t].[Id], [t].[ParentId], [t].[Name], [t].[Url], [t].[icon], [t].[SortOrder]
+FROM [AdminNavItems] AS [a]
+LEFT JOIN (
+    SELECT [a0].[Id], [a0].[ParentId], [a0].[Name], [a0].[Url], [a0].[icon], [a0].[SortOrder]
+    FROM [AdminNavItems] AS [a0]
+    WHERE [a0].[Enabled] = CAST(1 AS bit)
+) AS [t] ON ([a].[ParentId] <> [t].[ParentId] OR [a].[ParentId] IS NULL OR [t].[ParentId] IS NULL) AND ([a].[ParentId] IS NOT NULL OR [t].[ParentId] IS NOT NULL)
+WHERE [a].[Enabled] = CAST(1 AS bit) AND [a].[ParentId] = 0
+ORDER BY [a].[Id]
+2025-10-13 09:48:15.048 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminNavItemModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:48:15.048 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API) in 124.1367ms
+2025-10-13 09:48:15.048 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:48:15.049 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - 200 null application/json; charset=utf-8 345.9868ms
+2025-10-13 09:48:15.053 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Address], [u].[PhoneNumber], [a].[RoleName]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:48:15.053 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureApp.Models.UserModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:48:15.053 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API) in 27.3643ms
+2025-10-13 09:48:15.053 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:48:15.054 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - 200 null application/json; charset=utf-8 355.6471ms
+2025-10-13 09:48:55.137 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:48:55.137 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:55.138 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - 204 null null 0.6041ms
+2025-10-13 09:48:55.146 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:48:55.277 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:55'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:48:55.278 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:18:55'.
+2025-10-13 09:48:55.278 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:48:55.278 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:48:55.278 +05:30 [INF] Route matched with {action = "GetAdminNavItems", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:48:55.296 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ParentId], [a].[Name], [a].[Url], [a].[icon], [a].[SortOrder], [t].[Id], [t].[ParentId], [t].[Name], [t].[Url], [t].[icon], [t].[SortOrder]
+FROM [AdminNavItems] AS [a]
+LEFT JOIN (
+    SELECT [a0].[Id], [a0].[ParentId], [a0].[Name], [a0].[Url], [a0].[icon], [a0].[SortOrder]
+    FROM [AdminNavItems] AS [a0]
+    WHERE [a0].[Enabled] = CAST(1 AS bit)
+) AS [t] ON ([a].[ParentId] <> [t].[ParentId] OR [a].[ParentId] IS NULL OR [t].[ParentId] IS NULL) AND ([a].[ParentId] IS NOT NULL OR [t].[ParentId] IS NOT NULL)
+WHERE [a].[Enabled] = CAST(1 AS bit) AND [a].[ParentId] = 0
+ORDER BY [a].[Id]
+2025-10-13 09:48:55.297 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminNavItemModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:48:55.297 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API) in 18.937ms
+2025-10-13 09:48:55.297 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:48:55.298 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - 200 null application/json; charset=utf-8 151.3319ms
+2025-10-13 09:50:37.737 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - null null
+2025-10-13 09:50:37.738 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:50:37.739 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - 204 null null 1.5143ms
+2025-10-13 09:50:37.751 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - null null
+2025-10-13 09:50:37.887 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:20:37'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:50:37.888 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05-10-2025 10:49:47', Current time (UTC): '13-10-2025 04:20:37'.
+2025-10-13 09:50:37.888 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:50:37.888 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.VerifyUser (AllureApp.API)'
+2025-10-13 09:50:37.914 +05:30 [INF] Route matched with {action = "VerifyUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult VerifyUser(System.String, System.String) on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:50:38.278 +05:30 [INF] Executed DbCommand (98ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedDate], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Password], [u].[PasswordExpiryDate], [u].[PhoneNumber], [u].[RoleId], [a].[Id], [a].[Edit], [a].[IsDeleted], [a].[RoleName], [a].[View]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1 AND [u].[PasswordExpiryDate] > GETDATE()
+2025-10-13 09:50:38.454 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:50:38.456 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.VerifyUser (AllureApp.API) in 541.8307ms
+2025-10-13 09:50:38.456 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.VerifyUser (AllureApp.API)'
+2025-10-13 09:50:38.456 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - 200 null application/json; charset=utf-8 705.4463ms
+2025-10-13 09:51:03.162 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:03.163 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:03.163 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - 204 null null 0.5417ms
+2025-10-13 09:51:03.182 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:03.183 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:03.183 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 1.1308ms
+2025-10-13 09:51:03.208 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:03.209 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:03.249 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:03.249 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:03.249 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:03.249 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:03.249 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:51:03.249 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:51:03.256 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:03.256 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:03.257 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 7.4631ms
+2025-10-13 09:51:03.257 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:03.257 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 48.1739ms
+2025-10-13 09:51:03.258 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Address], [u].[PhoneNumber], [a].[RoleName]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:03.260 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureApp.Models.UserModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:03.260 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API) in 10.9167ms
+2025-10-13 09:51:03.260 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:03.261 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - 200 null application/json; charset=utf-8 52.1858ms
+2025-10-13 09:51:07.113 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:07.114 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:07.114 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:07.114 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:51:07.117 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:07.117 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:07.117 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 3.1568ms
+2025-10-13 09:51:07.117 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:07.117 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 4.5619ms
+2025-10-13 09:51:15.286 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:15.286 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:15.286 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:15.287 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:15.287 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 0.8933ms
+2025-10-13 09:51:15.287 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - 204 null null 1.2203ms
+2025-10-13 09:51:15.302 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:15.302 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:15.307 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:15.307 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:15.307 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:15.307 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:15.307 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:51:15.307 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:51:15.311 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Address], [u].[PhoneNumber], [a].[RoleName]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:15.311 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:15.311 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureApp.Models.UserModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:15.311 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:15.311 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 4.1621ms
+2025-10-13 09:51:15.311 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API) in 4.1585ms
+2025-10-13 09:51:15.312 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:15.312 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:15.312 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 9.7819ms
+2025-10-13 09:51:15.312 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - 200 null application/json; charset=utf-8 9.7995ms
+2025-10-13 09:51:26.467 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:26.467 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:26.468 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 0.8264ms
+2025-10-13 09:51:26.470 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:26.471 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:26.471 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:26.471 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:51:26.476 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:26.477 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:26.477 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 5.7389ms
+2025-10-13 09:51:26.477 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:26.477 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 7.2204ms
+2025-10-13 09:51:34.641 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:34.641 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:34.642 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:34.642 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 1.2082ms
+2025-10-13 09:51:34.643 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:34.643 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - 204 null null 2.4894ms
+2025-10-13 09:51:34.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:34.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:34.651 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:34.651 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:34.652 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:34.652 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:34.652 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:51:34.652 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:51:34.655 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:34.655 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Address], [u].[PhoneNumber], [a].[RoleName]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:34.655 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:34.655 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureApp.Models.UserModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:34.656 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API) in 3.7081ms
+2025-10-13 09:51:34.656 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 3.6551ms
+2025-10-13 09:51:34.656 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:34.656 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:34.656 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - 200 null application/json; charset=utf-8 5.38ms
+2025-10-13 09:51:34.656 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 5.3342ms
+2025-10-13 09:51:36.223 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:36.226 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:36.226 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:36.226 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:51:36.231 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:36.232 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:36.232 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 5.7721ms
+2025-10-13 09:51:36.232 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:36.233 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 9.2833ms
+2025-10-13 09:51:40.156 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:40.156 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:40.156 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:40.156 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAllUsers - 204 null null 0.309ms
+2025-10-13 09:51:40.156 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:40.159 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/Role/GetAllRoles - 204 null null 3.2936ms
+2025-10-13 09:51:40.161 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - null null
+2025-10-13 09:51:40.166 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - null null
+2025-10-13 09:51:40.459 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:21:40'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:51:40.459 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:21:40'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:51:40.459 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:21:40'.
+2025-10-13 09:51:40.460 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:21:40'.
+2025-10-13 09:51:40.460 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:40.460 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:51:40.460 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:40.460 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:40.461 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:51:40.461 +05:30 [INF] Route matched with {action = "GetAllRoles", controller = "Role"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllRoles() on controller AllureApp.API.Controllers.RoleController (AllureApp.API).
+2025-10-13 09:51:40.463 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Address], [u].[PhoneNumber], [a].[RoleName]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:40.463 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[RoleName], CASE
+    WHEN [a].[View] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[View] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [View], CASE
+    WHEN [a].[Edit] = CAST(0 AS bit) THEN N'False'
+    WHEN [a].[Edit] = CAST(1 AS bit) THEN N'True'
+    ELSE NULL
+END AS [Edit]
+FROM [AdminRole] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2025-10-13 09:51:40.464 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureApp.Models.UserModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:40.464 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API) in 3.2888ms
+2025-10-13 09:51:40.464 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminRoleModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:51:40.464 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAllUsers (AllureApp.API)'
+2025-10-13 09:51:40.464 +05:30 [INF] Executed action AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API) in 3.5067ms
+2025-10-13 09:51:40.464 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.RoleController.GetAllRoles (AllureApp.API)'
+2025-10-13 09:51:40.464 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAllUsers - 200 null application/json; charset=utf-8 303.6143ms
+2025-10-13 09:51:40.464 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/Role/GetAllRoles - 200 null application/json; charset=utf-8 298.3781ms
+2025-10-13 09:55:01.366 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:55:01.368 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:55:01.368 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/GetAdminNavItems - 204 null null 2.2024ms
+2025-10-13 09:55:02.467 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - null null
+2025-10-13 09:55:02.634 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:25:02'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:55:02.635 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:25:02'.
+2025-10-13 09:55:02.635 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:55:02.635 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:55:02.635 +05:30 [INF] Route matched with {action = "GetAdminNavItems", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAdminNavItems() on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:55:02.682 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ParentId], [a].[Name], [a].[Url], [a].[icon], [a].[SortOrder], [t].[Id], [t].[ParentId], [t].[Name], [t].[Url], [t].[icon], [t].[SortOrder]
+FROM [AdminNavItems] AS [a]
+LEFT JOIN (
+    SELECT [a0].[Id], [a0].[ParentId], [a0].[Name], [a0].[Url], [a0].[icon], [a0].[SortOrder]
+    FROM [AdminNavItems] AS [a0]
+    WHERE [a0].[Enabled] = CAST(1 AS bit)
+) AS [t] ON ([a].[ParentId] <> [t].[ParentId] OR [a].[ParentId] IS NULL OR [t].[ParentId] IS NULL) AND ([a].[ParentId] IS NOT NULL OR [t].[ParentId] IS NOT NULL)
+WHERE [a].[Enabled] = CAST(1 AS bit) AND [a].[ParentId] = 0
+ORDER BY [a].[Id]
+2025-10-13 09:55:02.682 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.Collections.Generic.List`1[[AllureStore.Models.AdminNavItemModel, AllureApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:55:02.683 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API) in 47.3976ms
+2025-10-13 09:55:02.683 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.GetAdminNavItems (AllureApp.API)'
+2025-10-13 09:55:02.683 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/GetAdminNavItems - 200 null application/json; charset=utf-8 251.1179ms
+2025-10-13 09:55:34.023 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - null null
+2025-10-13 09:55:34.024 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:55:34.024 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - 204 null null 1.2039ms
+2025-10-13 09:55:34.034 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - null null
+2025-10-13 09:55:34.160 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:25:34'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-13 09:55:34.161 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13-10-2025 04:21:38', Current time (UTC): '13-10-2025 04:25:34'.
+2025-10-13 09:55:34.161 +05:30 [INF] CORS policy execution successful.
+2025-10-13 09:55:34.161 +05:30 [INF] Executing endpoint 'AllureApp.API.Controllers.UserController.VerifyUser (AllureApp.API)'
+2025-10-13 09:55:34.161 +05:30 [INF] Route matched with {action = "VerifyUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult VerifyUser(System.String, System.String) on controller AllureApp.API.Controllers.UserController (AllureApp.API).
+2025-10-13 09:55:34.175 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[CreatedDate], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Password], [u].[PasswordExpiryDate], [u].[PhoneNumber], [u].[RoleId], [a].[Id], [a].[Edit], [a].[IsDeleted], [a].[RoleName], [a].[View]
+FROM [Users] AS [u]
+LEFT JOIN [AdminRole] AS [a] ON [u].[RoleId] = [a].[Id]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1 AND [u].[PasswordExpiryDate] > GETDATE()
+2025-10-13 09:55:34.177 +05:30 [INF] Executing OkObjectResult, writing value of type 'AllureApp.Models.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-13 09:55:34.178 +05:30 [INF] Executed action AllureApp.API.Controllers.UserController.VerifyUser (AllureApp.API) in 16.2368ms
+2025-10-13 09:55:34.178 +05:30 [INF] Executed endpoint 'AllureApp.API.Controllers.UserController.VerifyUser (AllureApp.API)'
+2025-10-13 09:55:34.178 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/api/User/VerifyUser?email=saksham@gmail.com&password=2445678 - 200 null application/json; charset=utf-8 144.1091ms

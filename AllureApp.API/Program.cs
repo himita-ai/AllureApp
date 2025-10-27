@@ -1,7 +1,8 @@
 using AllureApp.Service;
 using AllureApp.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-
+using Serilog;
 using System.Text;
 
 namespace AllureApp.API
@@ -12,6 +13,12 @@ namespace AllureApp.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Configure Serilog to read from appsettings.json
+            builder.Host.UseSerilog((context, configuration) =>
+            {
+                configuration.ReadFrom.Configuration(context.Configuration);
+            });
+
             // Add services to the container.
             builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -19,6 +26,23 @@ namespace AllureApp.API
         options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
         options.JsonSerializerOptions.PropertyNamingPolicy = null;
     });
+            builder.Services
+      .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+      .AddJwtBearer(options =>
+      {
+          options.TokenValidationParameters = new TokenValidationParameters
+          {
+              ValidateIssuer = true,
+              ValidateAudience = true,
+              ValidateLifetime = true,
+              ValidateIssuerSigningKey = true,
+
+              ValidIssuer = builder.Configuration["Jwt:Issuer"],
+              ValidAudience = builder.Configuration["Jwt:Audience"],
+              IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+              ClockSkew = TimeSpan.Zero  
+          };
+      });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -35,7 +59,7 @@ namespace AllureApp.API
             }
 
             app.UseHttpsRedirection();
-            //app.UseAuthentication();
+            app.UseAuthentication();
 
             app.UseAuthorization();
             app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
