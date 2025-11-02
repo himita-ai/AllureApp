@@ -11,5 +11,8 @@ namespace AllureApp.Service.Interface
     {
 
         List<ProductModel> GetAllProduct();
+        int InsertOrUpdateProduct(ProductModel model);
+        List<CategoryModel> GetAllCategories();
+        List<ProductModel> GetFrontPageProducts();
     }
 }

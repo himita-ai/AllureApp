@@ -20,6 +20,7 @@ namespace AllureApp.Models
         public DateTime? ModifiedDate { get; set; }
         public string? ImageUrl { get; set; }
         public bool? IsDeleted { get; set; }
+        public int? CatId { get; set; }
 
         public int? SubCatId { get; set; }
         public byte[]? ImageFile { get; set; }

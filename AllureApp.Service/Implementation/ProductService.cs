@@ -16,9 +16,25 @@ namespace AllureApp.Service.Implementation
         {
            _productRepo = productRepo;
         }
+
+        public List<CategoryModel> GetAllCategories()
+        {
+            return _productRepo.GetAllCategories();
+        }
+
         public List<ProductModel> GetAllProduct()
         {
             return _productRepo.GetAllProduct();
+        }
+
+        public List<ProductModel> GetFrontPageProducts()
+        {
+            return _productRepo.GetFrontPageProducts();
+        }
+
+        public int InsertOrUpdateProduct(ProductModel model)
+        {
+            return _productRepo.InsertOrUpdateProduct(model);
         }
     }
 }

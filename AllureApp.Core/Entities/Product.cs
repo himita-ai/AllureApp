@@ -21,6 +21,8 @@ namespace AllureApp.Core.Entities
         public DateTime? ModifiedDate { get; set; }
         public string? ImageUrl { get; set; }
         public bool? IsDeleted { get; set; }
+  
+
 
         public int? SubCatId { get; set; }
         [ForeignKey("SubCatId")]

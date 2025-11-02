@@ -10,5 +10,8 @@ namespace AllureApp.Repository.Interface
     public interface IProductRepo
     {
         List<ProductModel> GetAllProduct();
+        int InsertOrUpdateProduct(ProductModel model);
+        List<CategoryModel> GetAllCategories();
+        List<ProductModel> GetFrontPageProducts();
     }
 }

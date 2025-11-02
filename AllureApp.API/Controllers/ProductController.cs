@@ -1,5 +1,7 @@
 ﻿using AllureApp.Models;
 using AllureApp.Service.Interface;
+using AllureStore.Models;
+using AllureStore.Service.Implementation;
 using AllureStore.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +22,85 @@ namespace AllureApp.API.Controllers
         }
         [HttpGet("GetAllProduct")]
         public IActionResult GetAllProduct()
+        {
+            var response = new ResponseModel<List<ProductModel>>();
+            try
+            {
+                var result = _productService.GetAllProduct();
+                if (result.Any())
+                {
+                    response.Success = true;
+                    response.Status = "ok";
+                    response.Result = result;
+                }
+                else
+                {
+                    response.Success = false;
+                    response.Status = "Failed";
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
+        [HttpGet("GetAllCategories")]
+        public IActionResult GetAllCategories()
+        {
+            var response = new ResponseModel<List<CategoryModel>>();
+            try
+            {
+                var result = _productService.GetAllCategories();
+                if (result.Any())
+                {
+                    response.Success = true;
+                    response.Status = "ok";
+                    response.Result = result;
+                }
+                else
+                {
+                    response.Success = false;
+                    response.Status = "Failed";
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpPost("InsertOrUpdateProduct")]
+        public IActionResult InsertOrUpdateProduct(ProductModel model)
+        {
+            var response = new ResponseModel<int>();
+            try
+            {
+                var result = _productService.InsertOrUpdateProduct(model);
+                if (result == 1)
+                {
+                    response.Success = true;
+                    response.Status = "ok";
+                    response.Result = result;
+                }
+                else
+                {
+                    response.Success = false;
+                    response.Status = "Failed";
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpGet("GetFrontPageProducts")]
+        public IActionResult GetFrontPageProducts()
         {
             var response = new ResponseModel<List<ProductModel>>();
             try

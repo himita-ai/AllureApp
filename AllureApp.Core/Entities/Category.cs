@@ -16,6 +16,6 @@ namespace AllureApp.Core.Entities
         public string? Cat_Name { get; set; }
         public bool? Deleted { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public virtual ICollection<SubCategory>? SubCategories { get; set; }
+        public virtual ICollection<SubCategory> SubCategories { get; set; }
     }
 }

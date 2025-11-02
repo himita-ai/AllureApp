@@ -1,6 +1,7 @@
 using AllureApp.Service;
 using AllureApp.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Text;
@@ -57,6 +58,18 @@ namespace AllureApp.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseStaticFiles();
+
+            //var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploaded_Images");
+            //if (!Directory.Exists(uploadPath))
+            //    Directory.CreateDirectory(uploadPath);
+
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(uploadPath),
+            //    RequestPath = "/Uploaded_Images"
+            //});
 
             app.UseHttpsRedirection();
             app.UseAuthentication();
