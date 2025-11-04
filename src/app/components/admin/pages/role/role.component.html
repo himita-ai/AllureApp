@@ -1,0 +1,96 @@
+<div class="header-name">
+  <h4 style="padding-left: 10px; padding-top: 5px;">Role</h4>
+</div>
+
+<div>
+  <button class="btn btn-primary mb-3" (click)="openModal(roleModal)">Add Role</button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-striped table-hover">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> No. </th>
+    <td mat-cell *matCellDef="let element; index as i"> {{i + 1}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.RoleName}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="view">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> View </th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.View == 'True' " class="badge text-bg-success">Active</span>
+      <span *ngIf="element.View == 'False' " class="badge text-bg-warning">InActive</span>
+    </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Edit </th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.Edit == 'True' " class="badge text-bg-success">Active</span>
+      <span *ngIf="element.Edit == 'False' " class="badge text-bg-warning">InActive</span>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Action </th>
+    <td mat-cell *matCellDef="let element">
+      <!-- <button class="me-3 button-border" (click)="editRole(element, roleModal)"> 
+         <mat-icon class="text-primary">edit</mat-icon>
+      </button>  -->
+       <!-- <button class="button-border" (click)="deleteRole(element.RoleName)">
+        <mat-icon class="text-danger">delete</mat-icon>
+      </button> -->
+    </td>
+  </ng-container> 
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+<!-- Add Role Modal -->
+<ng-template #roleModal let-role>
+  <div class="modal-header">
+    <h4 class="modal-title">Add Role</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="role.dismiss('Cross click')"></button>
+  </div>
+
+  <div class="modal-body">
+    <form autocomplete="off" [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="">Role Name</label>
+        <input type="text" required autocomplete="off" formControlName="RoleName" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="">View</label>
+        <!-- <input type="text" required autocomplete="off" formControlName="View" class="form-control"> -->
+          <select class="form-control" formControlName="Edit">
+           <option value="True" selected>Active</option>
+           <option value="False">InActive</option>
+         </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="">Edit</label>
+        <!-- <input type="password" required autocomplete="off" formControlName="Edit" class="form-control"> -->
+         <select class="form-control" formControlName="Edit">
+           <option value="True" selected>Active</option>
+           <option value="False">InActive</option>
+         </select>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-warning" type="submit">Submit</button>
+        <button class="btn btn-danger" type="button" (click)="role.dismiss('Cancel')">Cancel</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

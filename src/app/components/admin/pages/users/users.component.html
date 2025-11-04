@@ -1,0 +1,109 @@
+
+<div class="mb-4">
+    <button class="btn btn-primary" (click)="openModal(assignRole)">Assign Role</button>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-striped table-hover">
+  <!-- Position Column -->
+  <ng-container matColumnDef="count">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> S.No. </th>
+    <td mat-cell *matCellDef="let element; index as i;"> {{i + 1}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> First Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.FirstName}} </td>
+  </ng-container>
+
+   <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Last Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.LastName}} </td>
+  </ng-container>
+
+   <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+  </ng-container>
+
+   <ng-container matColumnDef="number">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Phone Number </th>
+    <td mat-cell *matCellDef="let element"> {{element.PhoneNumber}} </td>
+  </ng-container>
+
+   <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Address </th>
+    <td mat-cell *matCellDef="let element"> {{element.Address}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <!-- <ng-container matColumnDef="view">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Last Name </th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.View == 'True' " class="badge text-bg-success">Active</span>
+      <span *ngIf="element.View == 'False' " class="badge text-bg-warning">InActive</span>
+    </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Edit </th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.Edit == 'True' " class="badge text-bg-success">Active</span>
+      <span *ngIf="element.Edit == 'False' " class="badge text-bg-warning">InActive</span>
+    </td>
+  </ng-container> -->
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef class="fs-6"> Action </th>
+    <td mat-cell *matCellDef="let element">
+      <button class="me-3 button-border" (click)="editUser(element)">
+        <mat-icon class="text-primary">edit</mat-icon>
+      </button>
+      <button class="button-border" (click)="deleteUser(element)">
+        <mat-icon class="text-danger">delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+<ng-template #assignRole let-role>
+  <div class="modal-header">
+    <h4 class="modal-title">Add Role</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="role.dismiss('Cross click')"></button>
+  </div>
+
+  <div class="modal-body">
+    <form autocomplete="off" [formGroup]="assignRoleForm" (ngSubmit)="onSubmit()">
+      <!-- <div class="mb-3">
+        <label for="">Role Name</label>
+        <input type="text" required autocomplete="off" formControlName="RoleName" class="form-control">
+      </div> -->
+
+      <div class="mb-3">
+        <label for="">Role Name</label>
+        <select class="form-control" formControlName="RoleName">
+          <option value="null" disabled selected>Select Role</option>
+          <option *ngFor="let role of roles" [value]="role.RoleName" >{{role.RoleName}}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <ng-multiselect-dropdown [placeholder]="'Select Users'" [settings]="dropdownSettings" [data]="dropdownData"
+          formControlName="Users" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+        </ng-multiselect-dropdown>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-warning" type="submit">Submit</button>
+        <button class="btn btn-danger" type="button" (click)="closeModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

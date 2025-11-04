@@ -1,0 +1,35 @@
+<div class="perfume-website">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">
+        <h1>LUXE PARFUM</h1>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-btn" (click)="goToProducts()">Products</button>
+        <button class="nav-btn login-btn" (click)="goToLogin()">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Full Image -->
+  <section class="hero-section">
+    <div class="hero-image-container">
+      <img [src]="bannerImage" alt="Luxury Perfume Collection" class="hero-image fade-transition">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="quotes-container">
+        <h1 class="main-quote">"Perfume is the key to our memories"</h1>
+        <p class="sub-quote">Discover fragrances that tell your story</p>
+        <div class="quote-decoration">
+          <span class="star">✦</span>
+          <span class="divider"></span>
+          <span class="star">✦</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-user-footer></app-user-footer>

@@ -1,0 +1,458 @@
+// .header-name {
+//   text-align: center;
+//   margin: 2rem 0;
+//   h2 {
+//     font-weight: 600;
+//     font-size: 2rem;
+//     color: #3a1c1a;
+//   }
+// }
+
+// .products-container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+//   gap: 1.5rem;
+//   padding: 0 2rem 2rem;
+// }
+
+// .product-card {
+//   background: #fff;
+//   border-radius: 12px;
+//   overflow: hidden;
+//   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+//   transition: 0.3s ease;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+
+//   &:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+//   }
+
+//   .product-image {
+//     width: 100%;
+//     height: 230px;
+//     object-fit: cover;
+//   }
+
+//   .product-info {
+//     padding: 1rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5rem;
+
+//     .product-name {
+//       font-size: 1.1rem;
+//       font-weight: 600;
+//       color: #2c1816;
+//     }
+
+//     .product-description {
+//       font-size: 0.9rem;
+//       color: #666;
+//       min-height: 40px;
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//     }
+
+//     .details {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       margin-top: 0.5rem;
+
+//       .price {
+//         font-weight: 600;
+//         color: #a43b3b;
+//       }
+
+//       .quantity {
+//         font-size: 0.85rem;
+//         color: #777;
+//       }
+//     }
+
+//     .buy-btn {
+//       margin-top: 0.8rem;
+//       background-color: #a43b3b;
+//       color: white;
+//       border: none;
+//       padding: 0.6rem;
+//       border-radius: 8px;
+//       font-weight: 500;
+//       cursor: pointer;
+//       transition: 0.3s;
+
+//       &:hover {
+//         background-color: #8b3030;
+//       }
+//     }
+//   }
+// }
+// Variables
+$primary-gold: #d4af37;
+$dark: #1a1a1a;
+$white: #fff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($prop: all, $time: 0.3s) {
+  transition: $prop $time ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.perfume-website {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+// Navigation
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(244, 241, 244);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  padding: 0;
+
+  .nav-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: $dark;
+    cursor: pointer;
+    background: linear-gradient(135deg, silver 0%, rgb(236, 68, 236) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    .nav-btn {
+      padding: 0.8rem 2rem;
+      background: transparent;
+      color: $dark;
+      border: 2px solid $dark;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      @include transition(all);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        background: $dark;
+        color: $white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      &.login-btn {
+        background: plum;
+        border-color: silver;
+        color: $white;
+
+        &:hover {
+          background: darken(silver, 10%);
+          border-color: darken(silver, 10%);
+          box-shadow: 0 5px 20px rgba(silver, 0.4);
+        }
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+.fade-transition {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-image-container img {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+  .hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.2) 100%
+      );
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    @include flex-center;
+    padding: 0 2rem;
+  }
+
+  .quotes-container {
+    text-align: center;
+    max-width: 900px;
+    animation: fadeInUp 1s ease;
+
+    .main-quote {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: $white;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+      font-style: italic;
+      position: relative;
+
+      &::before {
+        content: '"';
+        position: absolute;
+        left: -50px;
+        top: -20px;
+        font-size: 6rem;
+        color: $primary-gold;
+        opacity: 0.5;
+        font-family: Georgia, serif;
+      }
+    }
+
+    .sub-quote {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 2.5rem;
+      text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .quote-decoration {
+      @include flex-center;
+      gap: 1.5rem;
+
+      .star {
+        color: $primary-gold;
+        font-size: 1.5rem;
+        animation: sparkle 2s ease-in-out infinite;
+      }
+
+      .divider {
+        width: 100px;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          $primary-gold 50%,
+          transparent 100%
+        );
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .navbar {
+    .nav-content {
+      padding: 1.2rem 2rem;
+    }
+
+    .logo h1 {
+      font-size: 1.5rem;
+    }
+
+    .nav-actions .nav-btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .hero-section {
+    .quotes-container {
+      .main-quote {
+        font-size: 3rem;
+
+        &::before {
+          left: -30px;
+          font-size: 4.5rem;
+        }
+      }
+
+      .sub-quote {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .nav-content {
+      padding: 1rem 1.5rem;
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+    }
+
+    .nav-actions {
+      gap: 1rem;
+
+      .nav-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .hero-section {
+    .hero-content {
+      padding: 0 1.5rem;
+    }
+
+    .quotes-container {
+      .main-quote {
+        font-size: 2.2rem;
+
+        &::before {
+          left: -20px;
+          top: -15px;
+          font-size: 3.5rem;
+        }
+      }
+
+      .sub-quote {
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+
+      .quote-decoration {
+        .star {
+          font-size: 1.2rem;
+        }
+
+        .divider {
+          width: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    .logo h1 {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-actions {
+      gap: 0.5rem;
+
+      .nav-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .hero-section {
+    .quotes-container {
+      .main-quote {
+        font-size: 1.8rem;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .sub-quote {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

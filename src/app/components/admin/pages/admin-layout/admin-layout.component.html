@@ -1,0 +1,53 @@
+
+<div class="layout">
+  <app-admin-header class="admin-header"></app-admin-header>
+
+  <mat-sidenav-container class="sidenav-container">
+   
+    <mat-sidenav #drawer
+                 mode="side"
+                 [opened]="isExpanded"
+                 [fixedInViewport]="false"
+                 class="sidenav"
+                 [ngClass]="{ 'collapsed': !isExpanded }">
+
+    
+      <!-- <button mat-icon-button (click)="toggleSidebar()" class="toggle-btn">
+        <mat-icon>{{ isExpanded ? 'chevron_left' : 'menu' }}</mat-icon>
+      </button>
+       -->
+      <mat-nav-list *ngFor="let item of navItems">
+
+        <mat-list-item class="text-white" (click)="showSubMenu = !showSubMenu">
+          <span>{{item.Name}}</span>
+          <mat-icon class="ms-lg-5">expand_more</mat-icon>
+        </mat-list-item>
+
+        <div class="submenu" [ngClass]="{'expand': showSubMenu}">
+          <ng-container *ngFor="let child of item.Children">
+              <a mat-list-item routerLink="{{child.Url}}" routerLinkActive="active-link">
+                <mat-icon class="me-4">{{child.icon}}</mat-icon>
+                <span *ngIf="isExpanded">{{child.Name}}</span>
+              </a>
+          </ng-container>
+        </div>
+      
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+  
+    <mat-sidenav-content>
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <app-admin-footer class="admin-footer">
+    <p><strong>Address:</strong></p>
+          <p>123 Aroma Street, Fragrance City, Paris 75001</p>
+          <p><strong>Email:</strong> contact@luxparfum.com</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+  </app-admin-footer>
+</div>
