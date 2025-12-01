@@ -31,6 +31,7 @@ namespace AllureApp.Services
             services.AddScoped<IRepository<AdminRole>, Repository<AdminRole>>();
             services.AddScoped<IRepository<Category>, Repository<Category>>();
             services.AddScoped<IRepository<SubCategory>, Repository<SubCategory>>();
+            services.AddScoped<IRepository<CartItem>, Repository<CartItem>>();
 
 
 
@@ -40,6 +41,10 @@ namespace AllureApp.Services
             services.AddScoped<IRoleRepo, RoleRepo>();
             services.AddScoped<IProductRepo, ProductRepo>();
             services.AddScoped<I_ImageRepo, ImageRepo>();
+            services.AddScoped<ICartRepo, CartRepo>();
+           
+            services.AddScoped<IPaymentRepo, PaymentRepo>();
+            services.AddScoped<IOrderRepo, OrderRepo>();
 
 
 
@@ -48,6 +53,9 @@ namespace AllureApp.Services
             services.AddScoped<IRoleService, RolesService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<I_ImageService, ImageService>();
+            services.AddScoped<ICartService, CartService>();
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<IOrderService, OrderService>();
 
         }
     }

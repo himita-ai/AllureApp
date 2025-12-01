@@ -4,6 +4,7 @@ using AllureApp.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,11 @@ namespace AllureApp.Service.Implementation
         public ProductService(IProductRepo productRepo)
         {
            _productRepo = productRepo;
+        }
+
+        public bool DeleteProduct(int productId)
+        {
+            return _productRepo.DeleteProduct(productId);
         }
 
         public List<CategoryModel> GetAllCategories()

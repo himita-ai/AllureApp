@@ -1,0 +1,15 @@
+2025-11-05 10:03:17.150 +05:30 [INF] User profile is available. Using 'C:\Users\91982\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-05 10:03:17.698 +05:30 [WRN] The WebRootPath was not found: C:\Users\91982\source\repos\AllureAppAPI\AllureApp.API\wwwroot. Static files may be unavailable.
+2025-11-05 10:03:18.133 +05:30 [INF] Now listening on: https://localhost:7103
+2025-11-05 10:03:18.133 +05:30 [INF] Now listening on: http://localhost:5209
+2025-11-05 10:03:18.922 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 10:03:18.923 +05:30 [INF] Hosting environment: Development
+2025-11-05 10:03:18.923 +05:30 [INF] Content root path: C:\Users\91982\source\repos\AllureAppAPI\AllureApp.API
+2025-11-05 10:03:29.161 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/swagger/index.html - null null
+2025-11-05 10:03:29.611 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/swagger/index.html - 200 null text/html;charset=utf-8 462.6208ms
+2025-11-05 10:03:31.376 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 10:03:31.392 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-11-05 10:03:31.399 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16511 application/javascript; charset=utf-8 22.9199ms
+2025-11-05 10:03:31.945 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 557.6481ms
+2025-11-05 10:03:32.029 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - null null
+2025-11-05 10:03:32.065 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7103/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.4425ms

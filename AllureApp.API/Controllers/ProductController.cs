@@ -5,6 +5,7 @@ using AllureStore.Service.Implementation;
 using AllureStore.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
 
 namespace AllureApp.API.Controllers
 {
@@ -45,7 +46,7 @@ namespace AllureApp.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        
+
         [HttpGet("GetAllCategories")]
         public IActionResult GetAllCategories()
         {
@@ -124,5 +125,24 @@ namespace AllureApp.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpDelete("DeleteProduct")]
+        public IActionResult DeleteProduct(int productId)
+        {
+            try
+            {
+                var result=_productService.DeleteProduct(productId);
+                if (result)
+                {
+                    return Ok(result);
+                }
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }
+

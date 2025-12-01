@@ -32,7 +32,7 @@ namespace AllureApp.Repository.Implementation
                     Quantity = pd.Quantity,
                     Currency = pd.Currency,
                     ImageUrl = pd.ImageUrl,
-                    ImageFile = GetImages(pd.ImageUrl),
+                    ImageFil = GetImages(pd.ImageUrl),
                     SubCatId=pd.SubCatId,
                     CatId=pd.SubCategory.CatId
                 }).ToList();
@@ -76,6 +76,19 @@ namespace AllureApp.Repository.Implementation
                         IsDeleted = false,
                     };
                     _context.Products.Add(addProduct);
+                    _context.SaveChanges();
+                    result = 1;
+                }
+                else
+                {
+                    productExist.ProductName=model.ProductName;
+                    productExist.ProductDescription=model.ProductDescription;
+                    productExist.UnitPrice=model.UnitPrice;
+                    productExist.Quantity=model.Quantity;
+                    productExist.ModifiedDate = DateTime.Now;
+
+                    _context.Products.Update(productExist);
+
                     _context.SaveChanges();
                     result = 1;
                 }
@@ -125,7 +138,7 @@ namespace AllureApp.Repository.Implementation
                     Quantity = pd.Quantity,
                     Currency = pd.Currency,
                     ImageUrl = pd.ImageUrl,
-                    ImageFile = GetImages(pd.ImageUrl),
+                    ImageFil = GetImages(pd.ImageUrl),
                    
                 }).ToList();
                 return product;
@@ -135,6 +148,26 @@ namespace AllureApp.Repository.Implementation
                 throw;
             }
 
+        }
+
+        public bool DeleteProduct(int productId)
+        {
+            bool flag = false;
+            try
+            {
+                var productExist = _context.Products.FirstOrDefault(x => x.Id == productId);
+                if (productExist != null)
+                {
+                    productExist.IsDeleted = true;
+                    _context.SaveChanges();
+                    flag = true;
+                }
+                return flag;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

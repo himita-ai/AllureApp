@@ -23,7 +23,9 @@ namespace AllureApp.Models
         public int? CatId { get; set; }
 
         public int? SubCatId { get; set; }
-        public byte[]? ImageFile { get; set; }
+        public byte[]? ImageFil{ get; set; }
+    public ICollection<CartItemModel> CartItems { get; set; }
     }
 }
+    
 

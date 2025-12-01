@@ -13,5 +13,6 @@ namespace AllureApp.Repository.Interface
         int InsertOrUpdateProduct(ProductModel model);
         List<CategoryModel> GetAllCategories();
         List<ProductModel> GetFrontPageProducts();
+        bool DeleteProduct(int productId);
     }
 }
