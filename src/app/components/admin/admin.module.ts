@@ -15,6 +15,8 @@ import { UsersComponent } from './pages/users/users.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { CartComponent } from '../cart/cart.component';
+import { CheckoutComponent } from '../checkout/checkout.component';
 
 
 
@@ -29,6 +31,8 @@ import { ProductsComponent } from './pages/products/products.component';
     UsersComponent,
     DashboardComponent,
     ProductsComponent,
+    CartComponent,
+    CheckoutComponent
 
 
    

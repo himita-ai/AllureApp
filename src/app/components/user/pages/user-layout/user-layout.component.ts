@@ -45,4 +45,7 @@ export class UserLayoutComponent implements OnInit, OnDestroy {
   goToLogin(): void {
     this.router.navigate(['/admin/login']);
   }
+  goToCart():void{
+    this.router.navigate(['admin/cart']);
+  }
 }

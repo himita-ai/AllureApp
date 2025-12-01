@@ -132,6 +132,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import * as CartActions from 'src/app/cart/cart.actions';
+import { CartItem } from 'src/app/cart/cart.model';
+
+
 interface Products{
   Id:number;
  
@@ -140,7 +145,7 @@ interface Products{
   Quantity: number;
   UnitPrice: number;
   Currency: string;
-  ImageFile: string; // base64 image string
+  ImageFil: string; // base64 image string
 }
  @Component({
   selector: 'app-products',
@@ -151,7 +156,7 @@ export class ProductsComponent implements OnInit {
     products:any[]=[];
   
 
-  constructor( private api: ApiService, private toastr:ToastrService,private router:Router ) { }
+  constructor( private api: ApiService, private toastr:ToastrService,private router:Router, private store: Store ) { }
 
   ngOnInit(): void {
     this.getFrontPage();
@@ -168,4 +173,24 @@ export class ProductsComponent implements OnInit {
         }
       })
     }
-}
+     goToCart(): void {
+    this.router.navigate(['/admin/cart']);
+  }
+   addToCart(product: any) {
+    const cartItem: CartItem = {
+      Id: 0,
+      ProductId: product.Id,
+      ProductName: product.ProductName,
+      ProductDescription: product.ProductDescription,
+      UnitPrice: product.UnitPrice,
+      Quantity: 1,
+      ImageFile: product.ImageFil,
+      UserId: 4 
+    };
+
+    this.store.dispatch(CartActions.addToCart({ cartItem }));
+   this.toastr.success(`${product.ProductName} added to cart!`, 'Success');
+  }
+  }
+  
+

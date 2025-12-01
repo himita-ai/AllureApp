@@ -149,13 +149,15 @@ ProductName}} </td>
   <h2>Our Perfume Collection</h2>
 </div>
 
+
 <div class="products-container">
  
   <div class="product-card" *ngFor="let product of products; let i = index">
     <img
-      [src]="'data:image/png;base64,' + product.ImageFile"
+      [src]="'data:image/png;base64,' + product.ImageFil"
       alt="Product Image"
       class="product-image"
+      
     />
 
     <div class="product-info">
@@ -167,7 +169,7 @@ ProductName}} </td>
         <span class="quantity">Qty: {{ product.Quantity }}</span>
       </div>
 
-      <button class="buy-btn">Add to Cart</button>
+      <button class="buy-btn" (click)="addToCart(product)" >Add to Cart</button>
     </div>
   </div>
   </div>  

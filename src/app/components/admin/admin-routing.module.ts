@@ -9,12 +9,24 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from 'src/app/guards/auth.guard';
 import { RoleGuard } from 'src/app/guards/role.guard';
 import { ProductsComponent } from './pages/products/products.component';
+import { CartComponent } from '../cart/cart.component';
+import { CheckoutComponent } from '../checkout/checkout.component';
+
 
 const routes: Routes = [
   {
     path: '',
     component: AdminLayoutComponent,
     children: [
+      {
+        path:'cart',
+        component:CartComponent
+      },
+      {
+        path:'checkout',
+        component:CheckoutComponent
+
+      },
       {
         path: 'dashboard',
         component: DashboardComponent

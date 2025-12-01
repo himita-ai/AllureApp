@@ -12,12 +12,22 @@ import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
 import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from './cart/cart.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { CartEffects } from './cart/cart.effect';
+
+
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  
+   
+    
    
   ],
   imports: [
@@ -32,6 +42,11 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     ToastrModule.forRoot(),
     NgbModule,
     NgMultiSelectDropDownModule.forRoot(),
+    // StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({ 'cart': cartReducer }),
+    EffectsModule.forRoot([CartEffects]),
+
+
     
    
   ],

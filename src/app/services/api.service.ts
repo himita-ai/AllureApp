@@ -3,6 +3,27 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http'
 import { UserModel } from '../models/user-model';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { CartItem } from '../cart/cart.model';
+import { map } from 'rxjs/operators';
+
+interface CreateOrderRequest {
+  amount: number;
+}
+
+interface CreateOrderResponse {
+  orderId: string;
+  currency: string;
+  grandTotal: number;
+  razorpayKey: string;
+  receipt: string;
+}
+
+interface VerifyPaymentRequest {
+  rzp_OrderId: string;
+  rzp_PaymentId: string;
+  rzp_Signature: string;
+  userId: number;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -66,5 +87,32 @@ saveImage(formData: FormData, productId: any): Observable<any> {
     param=param.set('productId',productId);
     return this.http.delete<any>(`${this.url}/Product/DeleteProduct`,{params:param});
   }
+  getCart(userId: number): Observable<any> {
+    return this.http.get(`${this.url}/Cart/GetCart?UserId=${userId}`);
+  }
+  addToCart(cartItem: any) {
+  return this.http.post(`${this.url}/Cart/AddToCart`, cartItem);
+}
+updateQuantity(cartItemId: number, change: number) {
+  const endpoint = change > 0
+    ? `${this.url}/Cart/IncreaseQuantity?Id=${cartItemId}`
+    : `${this.url}/Cart/DecreaseQuantity?Id=${cartItemId}`;
+  return this.http.put(endpoint, {});
+}
+deleteItem(cartItemId: number) {
+  return this.http.delete(`${this.url}/Cart/DeleteItem?Id=${cartItemId}`);
+}
+createOrder(amount: number): Observable<CreateOrderResponse> {
+    const payload: CreateOrderRequest = { amount };
+    return this.http.post<CreateOrderResponse>(`${this.url}/Payment/create-order`, payload);
+  }
+
+  verifyPayment(request: VerifyPaymentRequest): Observable<any> {
+    return this.http.post<any>(`${this.url}/Payment/verify`, request);
+  }
+
 
 }
+
+
+
